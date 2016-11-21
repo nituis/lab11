@@ -1,5 +1,12 @@
 <HTML><BODY>
-<H1>Shopping Cart: (<%= c.length%> items)</H1>
+<%
+ a = 0;
+for (int i=0;i<c.length;i++){
+  if (c.qty > 0)
+  a += c.qty;
+}
+%>
+<H1>Shopping Cart: (<%= a %> items)</H1>
 <p><a href=/emptycart>Empty shopping cart</a></p>
 <table>
   <tr>
